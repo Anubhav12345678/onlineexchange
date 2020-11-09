@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ONLINE EXCHANGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://use.fontawesome.com/b40aa5e720.js"></script> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</head>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,500&display=swap');
+
+  *{
+    /* margin-left: 5px;
+     margin-right: 5px;*/
+     font-family: 'Exo 2', sans-serif;
+  }
+  .bg-light{
+    background-color: #FFDE00!important;
+  }
+
+  .nav-link{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .jumbotron{
+    background-color: #FFDE00;
+    margin-bottom: 0;
+  }
+
+
+  .lead{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .about{
+    background-color: #1f6f8b;
+    color: #fff;
+
+  }
+  
+  .about .h1{
+    font-size: 3.5em;
+  }
+
+  #aboutlist{
+    padding-left: 30%;
+    padding-right: 30%;
+    /*padding-top: 5%;*/
+    /*padding-bottom: 5%;*/
+  }
+  
+  #cate{
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .heading_main h1::after {
+    width: 250px;
+    height: 8px;
+    background: #9f7e29;
+    content: "";
+    display: block;
+    transform: skew(-30deg);
+    margin: 3px auto 30px;
+  }
+
+  #working{
+    background: #edf7fd!important;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+  
+  .col-lg-3
+  {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .col-md-6
+  {
+     padding-bottom: 2%;
+  } 
+  .col-sm-6
+  {
+    padding-bottom: 2%;
+  }
+
+  .step:hover{
+    scale: 1.5;
+    box-shadow: 0 0 1em white;
+    cursor: pointer;
+  }
+
+  .card{
+    border: none;
+  }
+
+  .heading_main h2::after
+  {
+    width: 250px;
+    height: 8px;
+    background: #9f7e29;
+    content: "";
+    display: block;
+    transform: skew(-30deg);
+  }
+
+ .dbtn
+{
+  margin: 5% 3% 5% 0;
+}
+
+#cta
+{
+  padding: 7% 15%;
+  text-align: center;
+  background-color: #FFDE00;
+  /*background-color: #ff4c68;*/
+  color: #fff;
+  font-weight: bold;
+  font-family: "Montserrat-Black"
+}
+
+.cta-head
+{
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+#footer
+{
+  padding: 7% 15%;
+  text-align: center;
+}
+
+.social-icon
+{
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+
+ #signup{
+  background-color: #FFDE00;
+}
+.signupform{
+  width: 480px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: none;
+  /*background-color: #1a1c20;*/
+}
+
+.signupform form{
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.signupform h2{
+  text-align: center;
+    font-size: 34px;
+    margin: 10px 0 15px;
+}
+
+.signupform .hint-text{
+   color: #999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+   
+@media(max-width: 992px)
+{
+  .nav-link{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.or-separator{
+  margin: 50px 0 15px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.or-separator b{
+    padding: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+.signupform .form-group{
+  margin-bottom: 20px;
+}
+
+.form-control{
+  border-radius: 50px;
+    outline: none !important;
+}
+
+.form-control .btn{
+  border-radius: 50px;
+    outline: none !important;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.mb-4, .my-4{
+  margin-bottom: 1.5rem!important;
+}
+
+.form-signin img{
+  vertical-align: middle;
+  border-style: none;
+}
+
+.mb-3 , .my-3{
+  margin-bottom: 1rem!important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+.form-signin{
+  padding-top: 30vh;
+  padding-bottom: 25vh;
+  /*padding-left: 5%;/*/
+  /*padding-right: 5%;*/
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin .formctrl {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.formctrl{
+  display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    /*transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;*/
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+#loginform{
+  background-color: #FFDE00;
+  display: none;  
+
+}
+
+
+@media(max-width: 920px)
+{
+  .display-4{
+    font-size: 2.5rem;
+  }
+
+  .cta-head{
+    font-size: 2.5rem;
+  }
+}
+
+</style>
+
+<script type="text/javascript">
+   function fun(){
+      document.querySelectorAll(".signupform")[0].style.display = 'block';
+      document.querySelector("#navbarsection").style.display = "none";
+      document.querySelector("#header").style.display = "none";
+      document.querySelector("#cate").style.display = "none";
+      document.querySelector("#working").style.display = "none";
+      document.querySelector("#benefits").style.display = "none";
+      document.querySelector("#team").style.display = "none";
+      document.querySelector("#cta").style.display = "none";
+      document.querySelector("#footer").style.display = "none";
+      
+      
+   }
+
+   function fun2()
+   {
+     document.querySelectorAll(".signupform")[0].style.display = 'none';
+      document.querySelector("#navbarsection").style.display = "block";
+      document.querySelector("#header").style.display = "block";
+      document.querySelector("#cate").style.display = "block";
+      document.querySelector("#working").style.display = "block";
+      document.querySelector("#benefits").style.display = "block";
+      document.querySelector("#team").style.display = "block";
+      document.querySelector("#cta").style.display = "block";
+      document.querySelector("#footer").style.display = "block";
+   }
+
+   function fun3(){
+      document.querySelector("#loginform").style.display = 'block';
+      document.querySelector("#navbarsection").style.display = "none";
+      document.querySelector("#header").style.display = "none";
+      document.querySelector("#cate").style.display = "none";
+      document.querySelector("#working").style.display = "none";
+      document.querySelector("#benefits").style.display = "none";
+      document.querySelector("#team").style.display = "none";
+      document.querySelector("#cta").style.display = "none";
+      document.querySelector("#footer").style.display = "none";
+   }
+
+   function fun4(){
+      document.querySelector("#loginform").style.display = 'none';
+      document.querySelector("#navbarsection").style.display = "block";
+      document.querySelector("#header").style.display = "block";
+      document.querySelector("#cate").style.display = "block";
+      document.querySelector("#working").style.display = "block";
+      document.querySelector("#benefits").style.display = "block";
+      document.querySelector("#team").style.display = "block";
+      document.querySelector("#cta").style.display = "block";
+      document.querySelector("#footer").style.display = "block";
+   }
+</script>
+
+<body>
+
+
+  <!-- Sign Up form -->
+  <section id="signup">
+
+  <div class="signupform">
+    <i class="fa fa-close" style="font-size:36px; position: relative; left: 480px; cursor: pointer;" onclick="fun2()"></i>
+    <form accept="" method="POST">
+       <h2>Sign Up</h2>
+       <p class="hint-text">Sign Up With Your Social Media Account or Email Address</p>
+       <div class="social-btn text-center">
+         <a href="#" class="btn  btn-primary"></i>Facebook</a>
+         <a href="#" class="btn  btn-info">Twitter</a>
+         <a href="#" class="btn  btn-danger"> Google</a>
+       </div>
+
+       <div class="or-separator">
+         <b>or</b>
+       </div>
+
+       <div class="form-group">
+         <input type="text" class="form-control input-lg" name="username" placeholder="username" required="required">
+       </div>
+
+       <div class="form-group">
+         <input type="email" class="form-control input-lg" name="email" placeholder="Email Address" required="required">
+       </div>
+
+       <div class="form-group">
+         <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
+       </div>
+
+       <div class="form-group">
+         <input type="password" class="form-control input-lg" name="password" placeholder="Confirm Password" required="required">
+       </div>
+
+       <div class="form-group">
+         <button class="btn btn-lg btn-success btn-block signup-btn">Sign Up</button>
+       </div>
+    </form>
+    <div class="text-center">
+      Already Have An Account? <a href="#">Login Here</a>
+    </div>
+  </div>
+  </section>
+  <!-- Sign Up form ends -->
+
+  <!-- log in section -->
+  <section id="loginform">
+    <i class="fa fa-close" style="font-size:36px; padding-top: 2%; position: relative; left: 95%; cursor: pointer;" onclick="fun4()"></i>
+  <form class="form-signin">
+    <img class="mb-4" src="https://logodix.com/logo/1070482.jpg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="formctrl" placeholder="Email address" required="" autofocus="">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="formctrl" placeholder="Password" required="">
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Forgot Password?</a>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <!-- <p class="mt-5 mb-3 text-muted">© 2017-2018</p> -->
+  </form> 
+  </section>
+  <!-- log in section ends -->
+   
+   <section id="navbarsection">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">NAVBAR</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">LINK</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          DROPDOWN
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" onclick="fun()">SIGN UP</a>
+          <a class="dropdown-item" href="#">LOG IN</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">BLOG</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-shopping-cart" style="font-size:36px"></i></i></a>
+      </li>
+    </ul>
+    
+  </div>
+ </nav>
+ </section>
+
+
+<!-- header -->
+<section id="header">
+  <center>
+  <div class="jumbotron">
+    <h1 class="display-4">WEBSITE NAME</h1>
+    <p class="lead">This is a simple theme line, a simple jumbotron-style component for calling extra attention to featured content or information. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg"  role="button" onclick="fun()">SIGN UP</a>
+      <a class="btn btn-primary btn-lg" href="#" role="button" onclick="fun3()">LOG IN</a>
+    </p>
+  </div>
+  </center>
+
+  <div class="jumbotron about">
+      <h1>ABOUT THE WEBSITE</h1>
+      <br><br><br>
+      <center>
+         <ul id="aboutlist">
+           <li>
+             <h2>Buying - Get People Interested</h2>
+             <!-- <br> -->
+             <h6>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </h6>
+           </li>
+           <br>
+           <li>
+             <h2>Selling - Get People Interested</h2>
+             <!-- <br> -->
+             <h6>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </h6>
+           </li>
+           <br>
+           <li>
+             <h2>Renting - Get People Interested</h2>
+             <!-- <br> -->
+             <h6>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </h6>
+           </li>
+         </ul>
+      </center>
+  </div>
+</section>
+<!-- header ends -->
+
+
+<!-- categories  -->
+<section id="cate">
+   <div class="heading_main">
+   <center><h1 class="display-4">CATEGORIES</h1><center>
+   </div>
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-4 col-md-6 col-sm-6">
+         <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://d2kyz9nh4stz1f.cloudfront.net/thumbnails/wfh-2.jpg" alt="Card image cap">
+          <div class="card-body">
+          <h5 class="card-title">FURNITURES</h5>
+          <a href="#" class="btn btn-primary">SHOP NOW</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://d2kyz9nh4stz1f.cloudfront.net/thumbnails/wfh-2.jpg" alt="Card image cap">
+          <div class="card-body">
+          <h5 class="card-title">PACKAGES</h5>
+          <a href="#" class="btn btn-primary">SHOP NOW</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-10 col-sm-10">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://d2kyz9nh4stz1f.cloudfront.net/thumbnails/wfh-2.jpg" alt="Card image cap">
+          <div class="card-body">
+          <h5 class="card-title">FASHION</h5>
+          <a href="#" class="btn btn-primary">SHOP NOW</a>
+          </div>
+        </div>
+       </div>
+     </div>
+   </div>
+</section>
+
+<!-- categories  ends-->
+
+
+<!-- working starts -->
+<section id="working">
+  <div class="jumbotron">
+    <div class="heading_main">
+    <center><h1 class="display-4">HOW IT WORKS</h1><center>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card step" style="width: 18rem;">
+            <center><i class="fa fa-laptop" style="font-size:48px;color: black; padding-top: 2%;"></i></center>
+            <div class="card-body">
+              <h5 class="card-title">Choose Product</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card step" style="width: 18rem;">
+            <center><i class="fa fa-laptop" style="font-size:48px;color: black; padding-top: 2%;"></i></center>
+            <div class="card-body">
+              <h5 class="card-title">Chat With Owner</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card step" style="width: 18rem;">
+            <center><i class="fa fa-laptop" style="font-size:48px;color: black; padding-top: 2%;"></i></center>
+            <div class="card-body">
+              <h5 class="card-title">Finalise Deal</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card step" style="width: 18rem;">
+            <center><i class="fa fa-laptop" style="font-size:48px;color: black; padding-top: 2%;"></i></center>
+            <div class="card-body">
+              <h5 class="card-title">Product Delivery</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</section>
+<!-- working ends -->
+
+
+<!-- benefits starts -->
+<section  id="benefits">
+  <div class="heading_main">
+    <h2 class="display-4" style="padding-left: 5%;">BENEFITS</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="https://www.bhadepay.com/assets/imgs/benefits/1.jpg" style="width: 50%; height: 50%;">
+        </div>
+        <h5 class="card-title">Card title</h5>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="https://www.bhadepay.com/assets/imgs/benefits/2.jpg" style="width: 50%; height: 50%;">
+        </div>
+        <h5 class="card-title">Card title</h5>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="https://www.bhadepay.com/assets/imgs/benefits/3.jpg" style="width: 50%; height: 50%;">
+        </div>
+        <h5 class="card-title">Card title</h5>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="https://www.bhadepay.com/assets/imgs/benefits/4.jpg" style="width: 50%; height: 50%;">
+        </div>
+        <h5 class="card-title">Card title</h5>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="https://www.bhadepay.com/assets/imgs/benefits/5.jpg" style="width: 50%; height: 50%;">
+        </div>
+        <h5 class="card-title">Card title</h5>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="https://www.bhadepay.com/assets/imgs/benefits/6.jpg" style="width: 50%; height: 50%;">
+        </div>
+        <h5 class="card-title">Card title</h5>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- benefits ends -->
+
+<!-- team starts -->
+<section id="team">
+  <div class="heading_main">
+    <h2 class="display-4" style="padding-left: 5%;">OUR TEAM</h2>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRL2SnW18cgRAP2Ecj0AjlgNGu-8Ni0PFWIFA&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRL2SnW18cgRAP2Ecj0AjlgNGu-8Ni0PFWIFA&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRL2SnW18cgRAP2Ecj0AjlgNGu-8Ni0PFWIFA&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- team ends -->
+
+
+
+
+<section id="cta">
+
+      <h3 class="cta-head">Find the Best Deal for Your Unused Stuff, Right Away</h3>
+      <button type="button" class="btn btn-dark btn-lg dbtn" data-toggle="tooltip" data-placement="top" title="Android App Under Maintainance"><i class="fab fa-apple"></i>&nbsp;Download</button>
+      <button type="button" class="btn btn-outline-light btn-lg   dbtn" data-toggle="tooltip" data-placement="top" title="Android App Under Maintainance"><i class="fab fa-google-play"></i>&nbsp;Download</button>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer id="footer">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2020 ONLEXCH</p>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+  </script>
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+</body>
+</html>
